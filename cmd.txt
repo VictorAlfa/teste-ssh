@@ -1,0 +1,13 @@
+git config --global user.name "VictorAlfa"
+git config --global user.email "d7exter@gmail.com"
+git init
+git add .
+git commit -m "Primeiro commit"
+ssh -keygen -t rsa -C "d7exter@gmail.com"
+notepad ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+git remote add origin git@github.com:VictorAlfa/teste-ssh
+git push origin main
+git branch -M main
+git remote add origin https://github.com/VictorAlfa/teste-ssh.git
+git push -u origin main
